@@ -1,0 +1,1 @@
+<?php echo $javascript->link(array('tiny_mce/tiny_mce', 'simple_wysiwyg', 'thickbox'), false); ?>

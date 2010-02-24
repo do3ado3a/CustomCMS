@@ -1,0 +1,1 @@
+<li><?php echo $html->link(__('New User', true), array('action'=>'add')); ?></li>

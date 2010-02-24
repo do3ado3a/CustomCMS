@@ -1,0 +1,817 @@
+
+/******************************************************************
+ +Overall Colors and Styles
+******************************************************************/
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  text-align: center;
+  background-image:  url(../img/background-website.gif);
+  background-repeat: repeat-x;
+}
+
+* {
+  margin *;
+}
+
+html, body {
+  height: 100%;
+}
+
+body, td, th, textarea, input, select, h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p, form, h1, h2, h3, h4, h5, h6,  ul, ol {
+  margin: 0px;
+  padding: 0px;
+}
+
+a img { 
+  border: none;
+}
+
+a {
+ color: #50AEC7;
+ text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+/******************************************************************
+ + Default Font Styles
+******************************************************************/
+#main h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  height: 20px; /* background image ie6 */
+  font-weight: lighter;
+  background: url(../img/background-h2.png) repeat-x;
+  padding: 5px;
+}
+
+#main p{
+ color: black;
+ font-size: 12px;	
+ margin-bottom: 10px;
+}
+
+#main address{
+ color: #999999;
+ font-size: 11px;	
+ margin-bottom: 10px;
+}
+
+#main li { 
+  list-style-type: disc; 	
+  font-size: 12px;	
+}
+
+#main ul {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+/******************************************************************
+ + Custom Font styles
+******************************************************************/
+.powered-by {
+  float: left;
+  font-size: 12px;
+  color: white;
+  margin-top: 10px;
+}
+
+.version {
+  float: right;
+  font-size: 12px;
+  color: white;
+  margin-top: 10px;
+}
+
+.welcome {
+ color: #999999;
+ display: block;
+ font-size: 14px;	
+ margin-bottom: 10px;
+}
+
+a.cancel, a.delete{
+  color: red;
+}
+a.cancel:hover, a.delete:hover{
+  color: black;
+}
+
+.rss a{
+  float: right;
+  font-size: 10px;
+  color: #FF9900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rss a:hover{
+ color: black;
+}
+
+.tag {
+  background: url(../img/icon-tag.gif) no-repeat left center;
+  padding: 0px 0 0px 15px;
+  font-size: 11px;
+}
+
+.published {
+  color: #99CC00;
+}
+
+.drafts {
+  color: orange;
+}
+
+
+/******************************************************************
+ +Misc 
+******************************************************************/
+/* clear floats so container element wraps entire inner elements */
+.clear-floats {
+  clear: both;
+}
+
+/* hack for IE 6 < to make entire block clickable */
+* html #sidebar a {
+  height: 1px; 
+}
+
+/* hide element from browser, handy for labels. */
+.hidden {
+  display: none;
+}
+
+
+/******************************************************************
+ +Elements
+******************************************************************/
+
+/* average */
+.average {
+ width: 199px;
+ border-bottom: 1px solid #EFEFEF;
+ border-right: 1px solid #EFEFEF;
+ float: left;
+ margin-bottom: 10px;
+}
+
+.inner-average {
+  padding: 8px;
+}
+
+.average .title {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+}
+.average .count {
+  font-size: 25px;
+  font-weight: bold;
+  vertical-align: text-bottom;
+  float: left;
+  display: block;
+}
+
+.average .name {
+  color: #333333;
+  display: block;
+  clear: right; /* drop below all link */
+  float: right;
+  font-size: 11px;
+}
+
+.average .all {
+  float: right;
+  display: block;
+  font-size: 11px;
+}
+
+
+.average .down {
+  float: left;
+  background: url(../img/icon-down.gif) no-repeat left center;
+  padding: 0px 0 0px 8px;
+  margin: 8px 0 0 3px;	
+  margin-top: 10px;	
+  color: #B90000;
+  font-size: 11px;
+}
+
+.average .up {
+  float: left;
+  background: url(../img/icon-up.gif) no-repeat left center;
+  padding: 0px 0 0px 8px;
+  margin: 8px 0 0 3px;	
+  color: #7BA400;
+  font-size: 11px;
+}
+
+/* photo */
+
+.photo {
+  width: 120px;
+  height: 120px;
+  padding-top: 10px;
+  text-align: center;
+  float: left;
+  border: 1px solid #EFEFEF;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#main .photo .actions li  { 
+  float:left; 
+  margin-right: 5px; 
+  font-size: 11px;
+  list-style-type: none;
+  color: #999999;
+}
+
+#main .photo .actions ul  {  
+  margin-left: 8px;
+}
+
+/* record */
+.record {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #EFEFEF;
+  padding-bottom: 7px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+#main .record .content .actions li  { 
+  float:left; 
+  margin-right: 5px; 
+  font-size: 11px;
+  list-style-type: none;
+  color: #999999;
+}
+
+#main .record .content .actions ul  {  
+ margin-left: 0;
+}
+
+.record .type{
+  width: 70px;
+  height: 38px;
+  font-size: 11px;
+  padding-top: 17px;
+  font-weight: bold;  
+  text-align: center;
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+
+
+.record .comment{
+  background: url(../img/background-comment.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .post{
+  background: url(../img/background-post.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .page{
+  background: url(../img/background-page.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .link{
+  background: url(../img/background-link.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .media{
+  background: url(../img/background-media.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .gallery{
+  background: url(../img/background-gallery.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .newsletter{
+  background: url(../img/background-newsletter.gif) no-repeat left center;
+  color: #666666;
+}
+
+.record .title {
+  font-size: 11px;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 3px;
+  display: block;
+}
+
+#main .body {
+  font-size: 11px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+#main .body p{
+  font-size: 11px;
+  margin-bottom: 3px;
+  display: block;
+}
+
+#main .body li{
+  font-size: 11px;
+}
+
+.record .author {
+  font-size: 10px;
+  color: #999999;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.record .when{
+  position:absolute; 
+  font-size: 11px;
+  color: #999999;
+  right: 10px;
+  top: 0px;
+}
+
+.record .tags{
+  position:absolute; 
+  font-size: 11px;
+  color: #999999;
+  right: 10px;
+  top: 15px;
+}
+
+.record .comments{
+  position:absolute; 
+  font-size: 11px;
+  color: #999999;
+  right: 10px;
+  top: 27px;
+}
+
+.record .comment-count a{
+ background: url(../img/icon-comment-off.gif) no-repeat left center;
+ width: 21px;
+ height: 23px;
+ text-align: center;
+ padding-top: 4px;
+ display: block;
+ color: white;
+ font-size: 10px;
+}
+
+.comment-count a:hover {
+ background: url(../img/icon-comment.gif) no-repeat left center;
+ color: black;
+}
+
+/* record search */
+#record-search {
+  float: right;
+  display: block;
+  margin-bottom: 20px;
+}
+
+
+/* record search */
+#search-record {
+  float: right;
+  display: block;
+  margin-bottom: 40px;
+  width: 300px;
+  height: 30px;
+  line-height: 30px; /* push text to bottom of div */
+  text-align: right;
+}
+
+/* status search */
+
+#search-status {
+  float: left;
+  display: block;
+  margin-bottom: 40px;
+  width: 250px;
+  height: 30px;
+  line-height: 45px; /* push text to bottom of div */
+  vertical-align: bottom;
+  text-align: left;
+}
+
+#search-status ul { 
+  margin-left: 0px;  
+}
+
+#search-status li { 
+  float:left; 
+  margin-right: 5px; 
+  list-style-type: none; 
+  font-size: 11px;
+  color: #999999;
+}
+
+#search-status  .active { 
+  color: black;
+}
+
+/* view */
+#view {
+  position:absolute; 
+  color: #999999;
+  right: 10px;
+  top: 9px;
+}
+
+#view li { 
+  float:left; 
+  margin-right: 5px; 
+  list-style-type: none; 
+  font-size: 11px;
+  color: #999999;
+}
+
+#view  .active { 
+  color: black;
+}
+
+
+/* paging */
+
+.paging {
+  text-align: center;
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+.paging span, .current{
+  font-size: 11px;
+}
+
+.paging .displaying {
+ color: #999999;
+ font-size: 11px;	
+ font-style: italic;
+ display: block;
+ margin-bottom: 5px;	
+}
+
+/* post info */
+
+.info {
+ font-size: 11px;
+ margin-bottom: 5px;
+ display: block;
+ top: 5px;
+ right: 15px;
+ color: #999999;
+ background-color: #F2F9FB;
+ padding: 5px;
+}
+
+.options {
+ margin-bottom: 10px;
+ text-align: right;
+ display: block;
+ width: 100%;
+ color: #999999;
+ font-size: 11px;
+}
+
+.tags-top {
+ margin-bottom: 10px;
+ display: block;
+ width: 100%;
+ color: #999999;
+}
+
+.status {
+ float: right;
+ font-size: 22px;
+ margin-bottom: 10px;
+ display: block;
+ width: 100%;
+}
+
+/* login */
+
+#login {
+  width: 180px;
+  margin: 75px auto 0 auto;
+  text-align: left;
+}
+#login form{
+ margin-top: 10px;
+ margin-left: 10px;
+}
+
+
+/******************************************************************
+ + Forms
+******************************************************************/
+form {
+  margin-left: 0px;
+}
+
+form .note {
+ display: block;
+ color: #999999;
+ font-style: italic;
+ font-size: 12px;
+ margin-bottom: 10px;
+}
+
+form .submit {
+float: left;
+}
+
+form .or {
+float: left;
+margin-top: 3px;
+line-height: 42px;
+margin-left: 5px;
+}
+
+form div{
+  margin-bottom: 5px;
+}
+
+form label{
+  display: block;
+  color: #999999;
+  margin-bottom: 3px;
+  clear: right;
+  font-size: 14px;
+}
+
+form input{
+  font-size: 14px;
+  padding: 3px;
+}
+
+form select{
+  color: #11090A;
+  padding: 3px;
+  font-size: 14px;
+}
+
+form a {
+  text-decoration: none;
+  color: #33B1E9;
+}
+
+form textarea{
+  padding: 3px;
+  font-size: 14px;
+}
+
+div.submit input {
+ margin-top: 10px;
+ font-size: 14px;
+}
+
+/******************************************************************
+ +Page Skeleton
+******************************************************************/
+
+/* pad the inside of elements */
+.content {
+  display: block;
+  padding: 0 10px 0px 10px;
+}
+
+#wrapper {
+  width: 800px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;	
+  margin: 0 auto -30px auto;
+  text-align: left;
+  position: relative;
+  background: url(../img/background-wrapper.png) no-repeat;
+}
+
+#header {
+  width: 800px;
+  height: 90px;
+  position: relative;
+}
+
+#sidebar{
+  width: 179px;
+  margin-top: 10px;
+  border-right: 1px solid #EFEFEF;
+  float: left;
+}
+
+#main{
+  width: 620px;
+  margin-top: 10px;
+  float: right;
+  position: relative;
+}
+
+#push{ /* ie footer fix, overlays footer. If you wanna see what it does put a background colour on it. */
+  height: 30px;
+}
+
+#footer {
+  height: 30px;
+  background: #A7CC00;
+}
+
+#footer #inner-footer {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/******************************************************************
+ +Header
+******************************************************************/
+#header h1 {
+  color: white;
+  font-size: 20px;
+  padding-top: 8px;
+  margin-left: 10px;
+  font-weight: lighter;
+}
+
+/* +Navigation */
+
+#nav li { 
+  float:left; 
+  margin-right: 5px; 
+  list-style-type: none; 
+  font-size: 12px;
+}
+
+#nav li a { 
+  display: block; 
+  background: #0D859C url(../img/tab-left-off.gif) left top no-repeat;
+  color: white; 
+  padding: 10px 5px 8px 5px; 
+  text-decoration: none; 
+}
+
+
+#nav li a:hover { 
+  background: #FFFFFF url(../img/tab-left.gif) left top no-repeat;
+  color: black;
+}
+
+body.dashboard li#dashboard a,
+body.posts li#posts a, 
+body.comments li#comments a, 
+body.pages li#pages a, 
+body.links li#links a, 
+body.users li#users a,
+body.albums li#albums a, 
+body.newsletters li#newsletters a, 
+body.media li#media a{
+  background: #FFFFFF url(../img/tab-left.gif) left top no-repeat !important; 
+  color: black;
+}
+
+#nav  .active { 
+  background: #FFFFFF url(../img/tab-left.gif) left top no-repeat !important; 
+  color: black;
+}
+
+#nav ul.left { 
+    position:absolute; 
+    left: 5px; 
+    bottom:0; 
+}
+
+#nav ul.right { 
+    position:absolute; 
+    right:0; 
+    bottom:0; 
+}
+
+/* +User Navigation */
+#user-nav {
+  position:absolute; 
+  top: 10px;
+  right: 5px; 
+}
+
+#user-nav li { 
+  float:left; 
+  margin-right: 5px; 
+  list-style-type: none; 
+  font-size: 11px;
+  color: white;
+}
+
+#user-nav li a{ 
+  color: yellow;
+}
+
+#user-nav li a:hover{ 
+  color: black;
+}
+
+/******************************************************************
+ +Side Bar
+******************************************************************/
+#sidebar h3{
+  background: #0D859C url(../img/background-h3.gif) no-repeat;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+#sidebar .box{
+  margin-bottom: 25px;
+}
+
+/* +Side Nav */
+#sidebar li { 
+  list-style-type: none; 
+  font-size: 14px;
+  border-bottom: 1px solid #EFEFEF;
+}
+
+#sidebar ul {
+  margin-bottom: 5px;
+}
+
+#sidebar li a { 
+  display: block; 
+  padding: 5px; 
+  text-decoration: none; 
+}
+#sidebar li a:hover {
+  background: #FBFBFB;
+}
+
+#sidebar  .active { 
+  background: #FBFBFB;
+  color: black;
+}
+
+/******************************************************************
+ + Notices Warnings Errors
+******************************************************************/
+.flash {
+  padding: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  color: white;
+  font-size: 12px;
+  width: 590px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.warning {
+  font-weight: bold;
+  background: #FF1177; 
+  border-top: 4px solid #FFCCFF;  
+  border-bottom: 4px solid #FFCCFF;  
+}
+
+.message {
+  font-weight: bold;
+  color: #FF1177; 
+  font-size: 11px;  
+  text-align: center;
+  margin-top: 10px;
+}
+
+.success {
+  font-weight: bold;
+  background: #009933; 
+  border-top: 2px solid #00BF3F;
+  border-bottom: 2px solid #00BF3F;
+}
+
+.error-message {
+  color: #FF1177;
+  font-weight: bold;
+  font-size: 12px;
+}

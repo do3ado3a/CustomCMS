@@ -1,0 +1,1 @@
+<li><?php echo $html->link(__('New Subpage', true), array('action'=>'add')); ?></li>
