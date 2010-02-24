@@ -370,6 +370,17 @@ a.cancel:hover, a.delete:hover{
   top: 27px;
 }
 
+.record .subpageCount {
+	background: url(../img/icon-comment-off.gif) no-repeat left center;
+	width:21px;
+	height:23px;
+	text-align: center;
+ 	padding-top: 4px;
+ 	display: inline-block;
+	color: white;
+	font-size: 10px;
+}
+
 .record .comment-count a{
  background: url(../img/icon-comment-off.gif) no-repeat left center;
  width: 21px;
@@ -681,7 +692,9 @@ div.submit input {
 
 body.dashboard li#dashboard a,
 body.posts li#posts a, 
-body.comments li#comments a, 
+body.comments li#comments a,
+body.pages li#pages a, 
+body.subpages li#subpages a,  
 body.pages li#pages a, 
 body.links li#links a, 
 body.users li#users a,

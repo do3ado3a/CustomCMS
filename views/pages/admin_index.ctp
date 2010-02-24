@@ -1,7 +1,9 @@
+<?php $controller = isset($controller) ? $controller : $this->params['controller']; ?>
+
 <h2><?php __('Pages');?></h2>
 
 <?php echo $this->element('admin/toggle_views', array('cookieName' => 'Pages.pages')); ?>
-<?php echo $this->element('admin/toggle_statuses', array('count' => 'page')); ?>
+<?php //echo $this->element('admin/toggle_statuses', array('count' => 'page')); ?>
 <?php echo $this->element('admin/form_search'); ?>
 
 <div class="clear-floats"></div>

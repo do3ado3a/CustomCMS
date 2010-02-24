@@ -1,4 +1,5 @@
 <?php
+
 class PagesController extends AppController {
 
 	var $name = 'Pages';
@@ -6,7 +7,7 @@ class PagesController extends AppController {
 
   function beforeFilter()
   {
-    $this->paginate = array('limit' => 10, 'order' => array("{$this->pageType}.id" => 'DESC'));
+    $this->paginate = array('limit' => 3, 'order' => array("{$this->pageType}.id" => 'DESC'));
     parent::beforeFilter();
   }
 	function display() {
@@ -22,7 +23,7 @@ class PagesController extends AppController {
 	  $this->pageTitle = $this->name;
 	  $conditions = isset($this->params['named']['tag']) ? $this->habtmConditions($this->params['named']['tag'], $this->pageType, 'Tag') : $this->searchConditions($this->params);
 	  $this->{$this->pageType}->recursive = 0;
-		$this->set('posts', $this->paginate($this->pageType, $conditions));
+		$this->set('pages', $this->paginate($this->pageType, $conditions));
 	}
   
   
@@ -32,7 +33,7 @@ class PagesController extends AppController {
 	  $this->pageTitle = $this->name;
 	  $conditions = isset($this->params['named']['tag']) ? $this->habtmConditions($this->params['named']['tag'], $this->pageType, 'Tag') : $this->searchConditions($this->params);
 	  $this->{$this->pageType}->recursive = 0;
-		$this->set('posts', $this->paginate($this->pageType, $conditions));
+		$this->set('pages', $this->paginate($this->pageType, $conditions));
 	}
 
 	function admin_view($id = null) 
@@ -40,11 +41,11 @@ class PagesController extends AppController {
     $this->Redirect->idEmpty($id, array('action' => 'index'));
 		$page = $this->_findPage($id);
 		$this->pageTitle = $page[$this->pageType]['title'];
-		$this->set(compact('post'));
+		$this->set(compact('page'));
 	}
 
 	function admin_add() {
-	  $this->pageTitle = 'New Post';
+	  $this->pageTitle = 'New Page';
 		if (!empty($this->data)) 
 		{
 		  $this->data[$this->pageType]['user_id'] = $this->userId;
@@ -64,7 +65,7 @@ class PagesController extends AppController {
 	function admin_edit($id = null) {
     $this->Redirect->idEmpty($id, array('action' => 'index'));
 		$page = $this->_findPage($id);
-		$this->pageTitle = 'Edit ' . $post[$this->pageType]['title'];
+		$this->pageTitle = 'Edit ' . $page[$this->pageType]['title'];
  		
 		if (!empty($this->data)) 
 		{

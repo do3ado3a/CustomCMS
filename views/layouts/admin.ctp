@@ -39,6 +39,8 @@
       <div id="nav">
          <ul class="left">
           <li id="dashboard"><?php echo $html->link('Dashboard', array('controller' => 'dashboard', 'action' => 'index')) ?></li>
+          <li id="pages"><?php echo $html->link('Pages', array('controller' => 'pages', 'action' => 'index')) ?></li>
+          <li id="subpages"><?php echo $html->link('Sub Pages', array('controller' => 'subpages', 'action' => 'index')) ?></li>
           <li id="posts"><?php echo $html->link('Blog', array('controller' => 'posts', 'action' => 'index')) ?></li>
           <li id="comments"><?php echo $html->link('Comments', array('controller' => 'comments', 'action' => 'index')) ?></li>
           <li id="links"><?php echo $html->link('Links', array('controller' => 'links', 'action' => 'index')) ?></li>
@@ -119,7 +121,7 @@
     
     <div id="inner-footer">
       <div class="content">
-        <span class="powered-by">Powered by <strong>Your Name Goes Here</strong></span>
+        <span class="powered-by">Powered by <strong>Badia Daamash <?php $time = time(); $year = date('Y',$time); echo $year; ?></strong></span>
         <span class="version">Version 0.1</span>	
         <div class="clear-floats"></div>
       </div>	

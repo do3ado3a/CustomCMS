@@ -2,7 +2,7 @@
 App::import('Controller', 'Pages');
 class SubpagesController extends PagesController {
   var $name = 'Subpages';
-  var $postType = 'Subpage';
+  var $pageType = 'Subpage';
   
   
   function _lists()

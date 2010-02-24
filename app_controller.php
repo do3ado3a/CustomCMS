@@ -28,7 +28,6 @@ class AppController extends Controller {
 	  if (isset($params['named']['status']) && isset($statuses[$params['named']['status']])) 
 	  {
 	    $conditions['Post.status_id'] = $statuses[$params['named']['status']];
-	    $conditions['Page.status_id'] = $statuses[$params['named']['status']];
 	  }
 	  return $conditions;
 	}

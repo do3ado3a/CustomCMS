@@ -6,7 +6,7 @@ class PostsController extends AppController {
 
   function beforeFilter()
   {
-    $this->paginate = array('limit' => 10, 'order' => array("{$this->postType}.id" => 'DESC'));
+    $this->paginate = array('limit' => 3, 'order' => array("{$this->postType}.id" => 'DESC'));
     parent::beforeFilter();
   }
 	

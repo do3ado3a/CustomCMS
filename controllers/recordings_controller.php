@@ -6,6 +6,8 @@ class RecordingsController extends AppController {
 	var $components = array('Recording' => array('cookies' => array('Posts.posts' => array('list','expanded'), 
 	                                                                'Comments.comments' => array('list','expanded'),
 	                                                                'Links.links' => array('list','expanded'),
+	                                                                'Pages.pages' => array('list','expanded'),
+	                                                                'Subpages.subpages' => array('list','expanded'),
 	                                                                'Media.media' => array('list','expanded'),
 	                                                                'Albums.albums' => array('list','expanded'),
 	                                                                'Newsletters.newsletters' => array('list','expanded')

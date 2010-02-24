@@ -1,3 +1,5 @@
+<?php $controller = isset($controller) ? $controller : $this->params['controller']; ?>
+
 <div class="record">
 <div class="content">
   <div class="type post">Post</div>
@@ -10,7 +12,7 @@
   <?php endif ?>
   <div class="when"><?php echo $time->niceShort($post['Post']['modified']); ?></div>
   <div class="tags"><?php echo $taggable->stringTagsToLinks(h($post['Post']['tags']), array(), array('class' => 'tag')); ?></div>
-  <div class="comments"><span class="comment-count"><?php echo $html->link($post['Post']['comment_count'], array('controller' => $controller, 'action'=>'view', $post[$type]['id'])); ?></span></div>
+  <div class="comments"><span class="comment-count"><?php echo $html->link($post['Post']['comment_count'], array('controller' => $controller, 'action'=>'view', $post['Post']['id'])); ?></span></div>
   <?php echo $this->element('admin/actions', array('controller' => 'posts', 'type' => 'Post', 'post' => $post)) ?>
 </div>
   <div class="clear-floats"></div>
