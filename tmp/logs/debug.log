@@ -413,3 +413,5 @@
 2010-02-24 13:36:08 Debug: Notice (8): Undefined variable: type in [APP\views\elements\admin\post.ctp, line 13]
 2010-02-24 13:36:08 Debug: Notice (8): Undefined index:   in [APP\views\elements\admin\post.ctp, line 13]
 2010-02-24 13:47:36 Debug: Notice (8): Undefined variable: controller in [APP\views\elements\admin\post.ctp, line 13]
+2010-02-24 23:32:40 Debug: Notice (8): Undefined index:  id in [APP\models\post.php, line 78]
+2010-02-24 23:34:28 Debug: Notice (8): Undefined index:  id in [APP\models\post.php, line 78]

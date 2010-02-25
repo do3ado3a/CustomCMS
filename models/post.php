@@ -4,9 +4,10 @@ class Post extends AppModel {
 	var $name = 'Post';
 	
 	var $useTable = 'posts';
-	
+
    var $actsAs = array('Taggable', 
-                      'Typeable'
+                      'Typeable',
+                      'Twitter.Twitterable' => array('on' => 'create')
                       );
 	
 	var $validate = array(
@@ -70,6 +71,16 @@ class Post extends AppModel {
     $parameters = isset($conditions['joins']) ? array_merge($conditions, compact('recursive', 'extra')) : compact('conditions', 'recursive', 'extra');
     return count($this->find('all', $parameters));
   } 		
+
+	function twitterStatus()
+	{
+		$title = $this->data['Post']['title'];
+		//$url   = Router::url(array('controller' => 'posts', 'action' => 'view', 'admin' => true, $this->data['Post']['id']), true);
+		$url   = Router::url('/', true);
+		return $this->twitterFormatStatus($title, $url, '...');
+	}
+
+
 
 }
 ?>

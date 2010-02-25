@@ -5,9 +5,9 @@
   <div class="type post">Page</div>
   <span class="title"><?php echo h($page['Page']['title']); ?></span>
 
-    
+    <?php if ($cookie->read('Pages.pages') == 'expanded'): ?>
     <span class="body"><?php echo $text->truncate($page['Page']['body'], 300, '...', false, true); ?></span>
-    
+   <?php endif; ?> 
   
   <?php echo $this->element('admin/pages_actions', array('controller' => 'pages', 'type' => 'Page', 'page' => $page)) ?>
   
